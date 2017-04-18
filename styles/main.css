@@ -20,7 +20,6 @@ body {
 }
 
 .nav-container li {
-	display: inline-block;
 	padding: 0 30px;
 	border-left: 1px solid #7F9383;
 	border-right: 1px solid #7F9383;
@@ -41,7 +40,11 @@ body {
 }
 
 .title {
+	display: flex;
+	flex-direction: column;
 	height: 495px;
+	align-items: center;
+	justify-content: center;
 }
 
 .title > img {
@@ -53,10 +56,7 @@ body {
 }
 
 .title > h1 {
-	padding-top: 172px;
-	padding-bottom: 10px;
 	margin: 0;
-	text-align: center;
 	font-size: 80px;
 	line-height: 80px;
 	color: white;
@@ -64,15 +64,14 @@ body {
 }
 
 .title > p {
-	margin: 0;
-	text-align: center;
+	line-height: 24px;
 	font-size: 22px;
 	color: white;
 	font-weight: 100;
 }
 
 .content-container {
-	padding: 0 calc(50% - 600px);
+	padding: 0 10%;
 	background-color: #f2f2f2;
 }
 
@@ -91,8 +90,17 @@ body {
 	padding-bottom: 90px;
 	text-align: center;
 	color: #7D7D7D;
+	line-height: 30px;
 	font-size: 16px;
 	font-weight: 100;
+}
+
+.content-container > p > strong {
+	color: black;
+}
+
+.content-container > p > span {
+	color: #80ba8e;
 }
 
 .content-container > hr {
@@ -135,7 +143,15 @@ body {
 }
 
 .list-container {
-	padding: 90px calc(50% - 600px) 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 90px 7% 0;
+}
+
+.list-container > div {
+	width: 50%;
+	text-align: center;
 }
 
 .list-container tr > td:first-child > div {
@@ -168,30 +184,30 @@ body {
 }
 
 .introduction-wrap {
-	height: 310px;
+	height: 280px;
 	background-image: url('../images/header.jpg');
 	background-size: 100%;
 	background-position: 0 630px, 0 320px;
 }
 
-/*.introduction-wrap > img {*/
-	/*width: 100%;*/
-	/*position: absolute;*/
-	/*clip: rect(320px auto 630px auto);*/
-	/*z-index: -1;*/
-	/*top: -320px;*/
-/*}*/
+.introduction-wrap > div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	text-align: center;
+	background: rgba(0,0,0,0.4);
+}
 
-.introduction-wrap > section {
+.introduction-wrap > div > q {
 	margin: 0;
-	padding: 120px 230px;
+	width: 67%;
 	text-align: center;
 	font-size: 24px;
 	line-height: 35px;
 	color: white;
 	font-weight: 300;
 	font-style: italic;
-	background: rgba(0,0,0,0.4);
 }
 
 .footer-link {
